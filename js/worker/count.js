@@ -8,7 +8,7 @@ onmessage = function(e) {
     case 'start':
       setInterval(function() {
         c ++;
-        console.log(c);
+        postMessage(c);
       }, 1000);
       break;
     default:

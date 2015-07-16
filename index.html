@@ -19,6 +19,10 @@
                 'params': []
               }
             );
+
+            countWorker.onmessage = function(e) {
+              $('.message').html(e.data);
+            };
           } else {
             $('.messsage').html('Web Worker not working.');
           }
