@@ -44,8 +44,8 @@ onmessage = function(e) {
 
   switch(action) {
     case 'position':
-      var url = 'http://cats-api.ecominfinity.com:7280/?';
-      url += 'la=' + params[0] + '&lo=' + params[1];
+      var url = 'http://wwh.ecominfinity.com:7281/?';
+      url += 'data=' + params[0] + '|' + params[1] + '';
       load(url, function(xhr) {
         var result = xhr.responseText;
         postMessage(result);
@@ -54,12 +54,3 @@ onmessage = function(e) {
     default:
   }
 };
-
-// load(
-//   'http://cats-api.ecominfinity.com:7280/product/detail?id=1',
-//   function(xhr) {
-//     var result = xhr.responseText;
-
-//     postMessage(result);
-//   }
-// );
